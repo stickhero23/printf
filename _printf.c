@@ -18,7 +18,7 @@ static int (*check_specifiers(const char *format))(va_list)
 		{"o", print_oct},
 		{"x", print_hex},
 		{"X", print_X},
-		{"p", print_percent},
+		{"p", print_p},
 		{"S", print_S},
 		{"r", print_rev},
 		{"R", print_rot13},
@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	va_start(va_list, format);
+	va_start(valist, format);
 	while (format[i])
 	{
 		for (; format[i] != '%' && format[i]; i++)

@@ -19,7 +19,7 @@ int print_char(va_list c)
  */
 int print_str(va_list s)
 {
-	int coun;
+	int count;
 	int *str = va_arg(s, char *);
 
 	if (str == NULL)
@@ -48,7 +48,7 @@ static int prnt_hex(char c)
 		if (j[count] >= 10)
 			_write_char('0' + diff + j[count]);
 		else
-			_write_char('0' + d[count]);
+			_write_char('0' + j[count]);
 	}
 	return (count);
 }
@@ -57,7 +57,7 @@ static int prnt_hex(char c)
  * @S: string to print
  * Return: a number of chars printed
  */
-int print_S(va_list S);
+int print_S(va_list S)
 {
 	unsigned int i;
 	int count = 0;
