@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_hex - prints unsigned int in hexidecimal form
+ * print_x - prints unsigned int in hexidecimal form
  * @n: unsigned int
  * @c: flag that determines whether to print uppercase/lowercase
  * 0 prints lowercase && 1 prints uppercase
