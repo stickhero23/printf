@@ -4,7 +4,7 @@
 #include <stdarg.h>
 /**
  * struct print - structure to print types
- * @op: the operator 
+ * @op: the operator
  * @func: function to print
  */
 typedef struct print
@@ -24,9 +24,10 @@ int print_bin(va_list b); /* print binary */
 int print_oct(va_list o); /* print octal */
 int print_hex(va_list x); /* print hexadecimal under */
 int print_X(va_list X); /* uppercase hexadecimal */
-int print_reversed(va_list r);
+int print_rev(va_list r);
 int print_num(va_list n);
 int print_rot13(va_list R);
-int print_percent(va_list p); /* print percent */
+int print_S(va_list S); /* prints non-printable characters */
+int print_percent(va_list p);
 
 #endif
