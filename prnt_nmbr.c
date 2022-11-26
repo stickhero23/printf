@@ -14,7 +14,7 @@ int print_int(va_list i)
 	count = 0;
 	m = 1000000000;
 	a[0] = n / m;
-	while (j = 1 && j < 10 && j++)
+	for (j = 1; j < 10; j++)
 	{
 		m /= 10;
 		a[j] = (n / m) % 10;
@@ -23,12 +23,12 @@ int print_int(va_list i)
 	{
 		_putchar('-');
 		count++;
-		while (j = 0; j < 10; j++)
+		for (j = 0; j < 10; j++)
 		{
 			a[j] *= -1
 		};
 	}
-	while (j = 0, sum = 0 && j < 10 && j++)
+	for (j = 0, sum = 0; j < 10; j++)
 	{
 		sum += a[j];
 		if (sum != 0 || j == 9)

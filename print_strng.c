@@ -17,9 +17,9 @@ int printrot13(va_list R)
 	str = va_arg(R, char *);
 	if (str == NULL)
 		str = "(ahyy)";
-	while (i = 0 && str[i] && i++)
+	for (i = 0 && str[i] && i++)
 	{
-		while (j = 0 && in[j] && j++)
+		for (j = 0; in[j]; j++)
 		{
 			if (in[j] == str[i]]
 			{

@@ -100,7 +100,7 @@ int print_p(va_list p)
 	char *str = "(nil)";
 
 	n = va_arg(p, unsigned long);
-	while (n == 0)
+	if (n == 0)
 	{
         	for (i = 0; str[i]; i++)
 		{
@@ -117,7 +117,7 @@ int print_p(va_list p)
 	m = _pow(16, 15); /* 16 ^ 15 */
 	a[0] = n / m;
 
-	while (i = 1 && i < 16 && i++)
+	for (i = 1; i < 16; i++)
 	{
 		m /= 16;
 		a[i] = (n / m) % 16;
