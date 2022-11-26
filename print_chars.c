@@ -9,7 +9,7 @@ int print_char(va_list c)
 {
 	char ch = (char)va_arg(c, int);
 
-	_write_char(ch);
+	_putchar(ch);
 	return (1);
 }
 /**
@@ -19,14 +19,14 @@ int print_char(va_list c)
  */
 int print_str(va_list s)
 {
-	int coun;
-	int *str = va_arg(s, char *);
+	int count;
+	char *str = va_arg(s, char *);
 
 	if (str == NULL)
 		str = "(null)";
 	for (count = 0; str[count]; count++)
 	{
-		_write_char(str[count]);
+		_putchar(str[count]);
 	}
 	return (count);
 }
@@ -46,9 +46,9 @@ static int prnt_hex(char c)
 	for (count = 0; count < 2; count++)
 	{
 		if (j[count] >= 10)
-			_write_char('0' + diff + j[count]);
+			_putchar('0' + diff + j[count]);
 		else
-			_write_char('0' + d[count]);
+			_putchar('0' + j[count]);
 	}
 	return (count);
 }
@@ -57,7 +57,7 @@ static int prnt_hex(char c)
  * @S: string to print
  * Return: a number of chars printed
  */
-int print_S(va_list S);
+int print_S(va_list S)
 {
 	unsigned int i;
 	int count = 0;
@@ -69,14 +69,14 @@ int print_S(va_list S);
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
-			_write_char('\\');
-			_write_char('x');
+			_putchar('\\');
+			_putchar('x');
 			count += 2;
 			count += prnt_hex(str[i]);
 		}
 		else
 		{
-			_write_char(str[i]);
+			_putchar(str[i]);
 			count++;
 		}
 
@@ -100,7 +100,7 @@ int print_rev(va_list r)
 		;
 	for (i -= 1; i >= 0; i--)
 	{
-		_write_char(str[i]);
+		_putchar(str[i]);
 		count++;
 	}
 	return (count);
