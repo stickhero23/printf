@@ -25,8 +25,8 @@ int print_int(va_list i)
 		count++;
 		for (j = 0; j < 10; j++)
 		{
-			a[j] *= -1
-		};
+			a[j] *= -1;
+		}
 	}
 	for (j = 0, sum = 0; j < 10; j++)
 	{
