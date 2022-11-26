@@ -7,33 +7,33 @@
  */
 int print_int(va_list i)
 {
-	int p[10];
-	int k, a, i, sum, count;
+	int a[10];
+	int j, m, n, sum, count;
 
-	i = va_arg(n, int);
+	n = va_arg(i, int);
 	count = 0;
-	a = 1000000000;
-	p[0] = i / a;
-	while (k = 1 && k < 10 && k++)
+	m = 1000000000;
+	a[0] = n / m;
+	while (j = 1 && j < 10 && j++)
 	{
-		a /= 10;
-		p[k] = (i / a) % 10;
+		m /= 10;
+		a[j] = (n / m) % 10;
 	}
-	if (i < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 		count++;
-		while (k = 0; k < 10; k++)
+		while (j = 0; j < 10; j++)
 		{
-			pkj] *= -1
+			a[j] *= -1
 		};
 	}
-	while (k = 0, sum = 0 && k < 10 && k++)
+	while (j = 0, sum = 0 && j < 10 && j++)
 	{
-		sum += p[k];
-		if (sum != 0 || k == 9)
+		sum += a[j];
+		if (sum != 0 || j == 9)
 		{
-			_putchar('0' + p[k]);
+			_putchar('0' + a[j]);
 			count++;
 		}
 	}
@@ -47,32 +47,32 @@ int print_int(va_list i)
  */
 int print_d(va_list d)
 {
-	int p[10];
-	int k, a, i, sum, count;
+	int a[10];
+	int j, m, n, sum, count;
 
-	i = va_arg(d, int);
+	n = va_arg(d, int);
 	count = 0;
 	m = 1000000000;
-	p[0] = i / a;
-	for (k = 1; k < 10; k++)
+	a[0] = n / m;
+	for (j = 1; j < 10; j++)
 	{
-		a /= 10;
-		p[k] = (i /a) % 10;
+		m /= 10;
+		a[j] = (n /m) % 10;
 
 	}
-	if (i < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 		count++;
-		for (k = 0; k < 10; k++)
-			p[k] *= -1;
+		for (j = 0; j < 10; j++)
+			a[j] *= -1;
 	}
-	for (k = 0, sum = 0; k < 10; k++)
+	for (j = 0, sum = 0; j < 10; j++)
 	{
-		sum += p[k];
-		if (sum != 0 || k == 9)
+		sum += a[j];
+		if (sum != 0 || j == 9)
 		{
-			_putchar('0' + p[k]);
+			_putchar('0' + a[j]);
 			count++;																			}
 	}
 	return (count);

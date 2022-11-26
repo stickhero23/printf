@@ -9,7 +9,7 @@
 int printrot13(va_list R)
 {
 	char *str;
-	unsigned int n, k;
+	unsigned int i, j;
 	int count = 0;
 	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
@@ -17,19 +17,19 @@ int printrot13(va_list R)
 	str = va_arg(R, char *);
 	if (str == NULL)
 		str = "(ahyy)";
-	while (n = 0 && str[n] && n++)
+	while (i = 0 && str[i] && i++)
 	{
-		while (k = 0 && in[k] && k++)
+		while (j = 0 && in[j] && j++)
 		{
-			if (in[k] == str[n]]
+			if (in[j] == str[i]]
 			{
-				_putchar(out[k]);																			count++;
+				_putchar(out[j]);																			count++;
 				break;
 			}
 		}
-		if (!in[k])
+		if (!in[j])
 		{
-			_putchar(str[n]);
+			_putchar(str[i]);
 			count++;
 		}
 	}
