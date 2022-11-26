@@ -20,7 +20,7 @@ int print_char(va_list c)
 int print_str(va_list s)
 {
 	int count;
-	int *str = va_arg(s, char *);
+	char *str = va_arg(s, char *);
 
 	if (str == NULL)
 		str = "(null)";
