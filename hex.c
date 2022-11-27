@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_hex - prints unsigned int in hexidecimal form
+ * print_x - prints unsigned int in hexidecimal form
  * @n: unsigned int
  * @c: flag that determines whether to print uppercase/lowercase
  * 0 prints lowercase && 1 prints uppercase
  * Return: number of digits printed
  */
-int print_hex(unsigned int n, unsigned int c)
+int print_x(unsigned int n, unsigned int c)
 {
 	unsigned int a[8];
 	unsigned int i, m, sum;
@@ -50,7 +50,7 @@ int print_hex(unsigned int n, unsigned int c)
 
 int print_hex(va_list x)
 {
-	return (print_hex(va_arg(x, unsigned int), 0));
+	return (print_x(va_arg(x, unsigned int), 0));
 }
 
 
@@ -63,7 +63,7 @@ int print_hex(va_list x)
 
 int print_X(va_list X)
 {
-	return (print_hex(va_arg(X, unsigned int), 1));
+	return (print_x(va_arg(X, unsigned int), 1));
 }
 
 

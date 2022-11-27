@@ -15,7 +15,7 @@ static int (*check_specifiers(const char *format))(va_list)
 		{"d", print_d},
 		{"u", print_unsigned},
 		{"b", print_bin},
-		{"o", print_oct},
+		{"o", printc_oct},
 		{"x", print_hex},
 		{"X", print_X},
 		{"p", print_p},

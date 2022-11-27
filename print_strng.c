@@ -6,7 +6,7 @@
  * @R: string to print
  * Return: number of printed chars
  */
-int printrot13(va_list R)
+int print_rot13(va_list R)
 {
 	char *str;
 	unsigned int i, j;
@@ -17,11 +17,11 @@ int printrot13(va_list R)
 	str = va_arg(R, char *);
 	if (str == NULL)
 		str = "(ahyy)";
-	for (i = 0 && str[i] && i++)
+	for (i = 0; str[i]; i++)
 	{
 		for (j = 0; in[j]; j++)
 		{
-			if (in[j] == str[i]]
+			if (in[j] == str[i])
 			{
 				_putchar(out[j]);																			count++;
 				break;

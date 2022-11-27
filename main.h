@@ -21,7 +21,7 @@ int print_int(va_list i);
 int print_d(va_list d);
 int print_unsigned(va_list u);
 int print_bin(va_list b);
-int print_oct(va_list o);
+int printc_oct(va_list o);
 int print_hex(va_list x);
 int print_X(va_list X);
 int print_rev(va_list r);
