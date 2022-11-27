@@ -49,10 +49,10 @@ int is_digit(char c)
 }
 
 /**
- * convert_size_number - Casts a number to the specified size
- * @num: Number to be casted.
- * @size: Number indicating the type to be casted.
- * Return: Casted value of num
+ * convert_size_number - appoints number to the specified size
+ * @num: Number to be appointed.
+ * @size: Number indicating the type to be casted or appointed.
+ * Return: Casted or appointed value of number
  */
 long int convert_size_number(long int num, int size)
 {
