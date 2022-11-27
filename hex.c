@@ -22,7 +22,7 @@ int print_hex(unsigned int n, unsigned int c)
 	a[0] = n / m;
 	for (i = 1; i < 8; i++)
 	{
-        	m /= 16;
+		m /= 16;
 		a[i] = (n / m) % 16;
 	}
 	for (i = 0, sum = 0, count = 0; i < 8; i++)
@@ -30,12 +30,12 @@ int print_hex(unsigned int n, unsigned int c)
 		sum += a[i];
 		if (sum || i == 7)
 		{
-		        if (a[i] < 10)
+			if (a[i] < 10)
 			_putchar('0' + a[i]);
-																								else
+			else
 			_putchar('0' + diff + a[i]);
 			count++;
-																							}
+		}
 	}
 	return (count);
 }
@@ -102,7 +102,7 @@ int print_p(va_list p)
 	n = va_arg(p, unsigned long);
 	if (n == 0)
 	{
-        	for (i = 0; str[i]; i++)
+		for (i = 0; str[i]; i++)
 		{
 			_putchar(str[i]);
 			count++;
@@ -126,13 +126,13 @@ int print_p(va_list p)
 	{
 		sum += a[i];
 		if (sum || i == 15)
-                {
-																								if (a[i] < 10)
-																									_putchar('0' + a[i]);
-																								else
-																									_putchar('0' + ('a' - ':') + a[i]);
-																								count++;
-		}	
+		{
+			if (a[i] < 10)
+				_putchar('0' + a[i]);
+			else
+				_putchar('0' + ('a' - ':') + a[i]);
+			count++;
+		}
 	}
 	return (count);
 }
